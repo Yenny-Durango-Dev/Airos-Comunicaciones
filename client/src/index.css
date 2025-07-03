@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-color: transparent;
+  backface-visibility: visible;
+}
+
+:root {
+  --airosDarkBlue: #01377D;
+  --airosBlue:#009DD0;
+  --airosLightBlue: #98E7F4;
+  --airosLimeGreen: #7FD349;
+  --airosGreen: #26B170;
+}
