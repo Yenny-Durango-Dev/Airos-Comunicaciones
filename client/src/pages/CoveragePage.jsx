@@ -1,69 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 const CoveragePage = () => {
   return (
-    <div className="bg-white text-gray-900 py-10 px-4">
-      <h1 className="text-3xl font-bold text-center mb-6">
-        Conoce nuestras zonas de cobertura
+    <div className="max-w-5xl mx-auto px-6 py-12 space-y-12">
+      <h1 className="text-4xl font-bold text-darkBlue text-center">
+        Zonas donde tenemos cobertura
       </h1>
 
-      <p className="text-center max-w-3xl mx-auto mb-10 text-gray-700">
-        En Airos Comunicaciones llevamos internet de calidad a zonas donde otras empresas no llegan. Gracias a nuestra tecnología inalámbrica y fibra óptica, conectamos hogares y negocios en áreas urbanas, rurales y de difícil acceso.
-      </p>
+      {/* Cobertura Nororiental */}
+      <div>
+        <h2 className="text-2xl font-semibold text-darkBlue mb-2">Medellín Zona Nororiental y Vereda Granizal (Bello)</h2>
+        <p className="mb-1 text-gray-700">Barrios:</p>
+        <ul className="list-disc list-inside text-gray-800 grid md:grid-cols-2 gap-2">
+          <li>Santo Domingo</li>
+          <li>La Avanzada</li>
+          <li>Carpinelo</li>
+          <li>Carambolas</li>
+          <li>El Pinar</li>
+          <li>Regalo de Dios</li>
+          <li>La Esperanza</li>
+          <li>Manantiales</li>
+          <li>Kilómetro 7</li>
+          <li>Kilómetro 8</li>
+          <li>Piedras Blancas</li>
+          <li>Pilonas Metro Cable Arví</li>
+          <li>Altos de Oriente 1 y 2</li>
+          <li>Portal de Oriente</li>
+        </ul>
+      </div>
 
-      {/* Zonas con cobertura */}
-      <section className="max-w-5xl mx-auto mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Zonas de cobertura actual:</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
-          <div>
-            <h3 className="font-bold mb-2">📍 Medellín</h3>
-            <ul className="list-disc list-inside">
-              <li>Manrique</li>
-              <li>Aranjuez</li>
-              <li>Popular</li>
-              <li>Santo Domingo</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">📍 Bello</h3>
-            <ul className="list-disc list-inside">
-              <li>Niquía</li>
-              <li>París</li>
-              <li>El Trapiche</li>
-              <li>Zamora</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">📍 Copacabana</h3>
-            <ul className="list-disc list-inside">
-              <li>Machado</li>
-              <li>La Misericordia</li>
-              <li>El Noral</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">📍 Girardota y Barbosa</h3>
-            <ul className="list-disc list-inside">
-              <li>Zona urbana</li>
-              <li>Vereda El Totumo</li>
-              <li>La Palma</li>
-            </ul>
-          </div>
+      {/* Cobertura Belén */}
+      <div>
+        <h2 className="text-2xl font-semibold text-darkBlue mb-2">Zona Belén</h2>
+        <p className="mb-1 text-gray-700">Barrios:</p>
+        <ul className="list-disc list-inside text-gray-800 grid md:grid-cols-2 gap-2">
+          <li>Guanteros</li>
+          <li>Aguas Frías Baja</li>
+          <li>Aguas Frías Alta</li>
+          <li>La Isla</li>
+          <li>Potrerito</li>
+        </ul>
+      </div>
+
+      {/* Mapa */}
+      <div>
+        <h2 className="text-2xl font-bold text-darkBlue mb-4 text-center">Zonas en el mapa</h2>
+        <div className="w-full h-[400px]">
+          <iframe
+            title="Mapa Cobertura Airos"
+            src="https://www.google.com/maps/d/u/0/edit?mid=1fxMqMjC8XKPXBqyDEM6crNeflz2Lgr4&usp=sharing" // cambia por tu link
+            width="100%"
+            height="100%"
+            className="rounded-xl shadow-md"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
         </div>
-      </section>
-
-      {/* Contacto si no aparece su zona */}
-      <div className="text-white p-6 rounded-xl shadow-md text-center max-w-3xl mx-auto">
-        <h3 className="text-xl font-bold mb-2">¿No ves tu zona en la lista?</h3>
-        <p>
-          Escríbenos por <a href="https://wa.me/573001112233" className="underline font-medium">WhatsApp</a> o visita nuestra <Link to="/contact" className="underline font-medium">página de contacto</Link> y te confirmamos si podemos instalar en tu ubicación.
-        </p>
       </div>
     </div>
   );
 };
 
 export default CoveragePage;
-
-

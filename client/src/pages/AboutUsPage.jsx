@@ -1,33 +1,97 @@
-import React from 'react'
-
 const AboutUsPage = () => {
   return (
-    <div>
-      {/* ¿Cómo nació la empresa?, ¿Por qué se creó?, ¿Desde cuándo están activos? */}
+    <div className="max-w-6xl mx-auto px-6 py-12 space-y-16">
+      {/* Título principal */}
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-darkBlue mb-4">¿Quiénes somos?</h1>
+        <p className="text-lg text-gray-700">
+          En Airos Comunicaciones conectamos hogares con internet rápido y confiable.
+          Somos una empresa comprometida con brindar acceso a internet en zonas rurales y urbanas,
+          con atención cercana, precios justos y soporte técnico oportuno.
+        </p>
+      </div>
+
+      {/* Misión y Visión */}
+      <div className="grid md:grid-cols-2 gap-12 text-gray-800">
+        <div>
+          <h2 className="text-2xl font-semibold text-darkBlue mb-2">Misión</h2>
+          <p>
+            Proporcionar servicios de internet estables, accesibles y de calidad, mejorando la conectividad
+            en comunidades que necesitan una solución confiable para trabajar, estudiar y entretenerse.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-semibold text-darkBlue mb-2">Visión</h2>
+          <p>
+            Ser la empresa de telecomunicaciones líder en nuestra región, reconocida por su compromiso,
+            innovación y atención al cliente, expandiendo el acceso al internet donde más se necesita.
+          </p>
+        </div>
+      </div>
+
+      {/* Diferenciales */}
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-darkBlue mb-4">¿Qué nos hace diferentes?</h2>
+        <ul className="list-disc list-inside max-w-xl mx-auto text-left text-gray-700 space-y-2">
+          <li>Atención personalizada y cercana.</li>
+          <li>Soporte técnico rápido y sin rodeos.</li>
+          <li>Planes ajustados a tus necesidades y presupuesto.</li>
+          <li>Cobertura en zonas donde otros no llegan.</li>
+          <li>Instalación ágil y sin complicaciones.</li>
+        </ul>
+      </div>
+
+      {/* Nuestro equipo */}
       <div>
-        <h1 className='text-2xl font-bold text-center p-5'>Quienes somos</h1>
-        <p className='p-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta numquam quisquam placeat doloremque atque repellat reiciendis ea ut nulla cum pariatur libero, temporibus sequi reprehenderit. Autem sed odio excepturi architecto suscipit nobis iure voluptates incidunt, quaerat dolorum minima repudiandae dignissimos quidem! Voluptates est atque dolores, odio nesciunt ex, assumenda officia itaque enim facere cum facilis voluptate quidem error blanditiis ipsam quo voluptatum quos. Nemo itaque odio omnis rerum sed voluptatibus excepturi! Odit corrupti nemo enim, asperiores optio eum magni ducimus ipsum perspiciatis totam error minus quas quae ab consequuntur aliquam, quasi tenetur sed provident. Ipsum, nostrum laborum impedit saepe, minima iure beatae doloremque hic adipisci illum consectetur aliquam facilis alias, quasi numquam in eveniet repellendus a eos aut! Atque tenetur pariatur ea minima hic delectus, doloremque itaque magnam incidunt! Culpa repellat magni, quo aperiam dolorum velit ullam, molestiae maiores consequuntur libero officiis iusto provident veritatis quasi odio perferendis quidem ad hic error ipsum nam. Quia, id iusto dolor blanditiis temporibus voluptate corporis ex officiis hic ea voluptates, ad voluptatum itaque adipisci iste, nihil deserunt ratione. Porro maiores deserunt atque exercitationem omnis eaque ipsum aspernatur voluptate quam molestias odit vel sapiente reprehenderit voluptatem unde, corrupti sequi tempora facilis, numquam quidem deleniti!</p>
+        <h2 className="text-2xl font-bold text-darkBlue mb-6 text-center">Nuestro equipo</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+          {[
+            { nombre: "David Diosa", rol: "Técnico de instalaciones" },
+            { nombre: "Pablo Franco", rol: "Soporte al cliente" },
+            { nombre: "Kate Franco", rol: "Administración" },
+            { nombre: "Brayan Nidea", rol: "Marketing digital" },
+            { nombre: "Franki Franco", rol: "Gestión operativa" },
+          ].map((persona, idx) => (
+            <div key={idx} className="p-4 border rounded-xl shadow-sm">
+              <img
+                src={`https://via.placeholder.com/100?text=${persona.nombre.split(" ")[0]}`}
+                alt={persona.nombre}
+                className="mx-auto rounded-full mb-3"
+              />
+              <h3 className="font-semibold text-lg">{persona.nombre}</h3>
+              <p className="text-sm text-gray-600">{persona.rol}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* mision y vision */}
-      <div className='flex bg-blue-200 p-5'>
-        <div className='bg-blue-300 rounded-md m-5'>
-          <h1 className='text-2xl font-bold text-center p-5'>Mision</h1>
-          <p className='p-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente perspiciatis numquam velit ipsam, amet soluta inventore voluptate quisquam sed a quod, iusto tenetur eos blanditiis placeat itaque! Deleniti animi esse, quis laborum ea quod ratione cumque eaque, doloremque obcaecati placeat unde iste ad. Quasi eaque ipsa sapiente ullam, rerum velit praesentium iure molestiae sequi nemo odit non maxime, voluptatem atque nisi hic perferendis, aut voluptas eos cumque ut? Ad alias cum dicta assumenda officia officiis nulla tempora sed amet aliquam modi, consequuntur nesciunt voluptatibus magni aperiam illo sunt excepturi rem voluptatum id similique. Voluptate doloremque recusandae, saepe iusto nostrum quasi?</p>
+      {/* Testimonios */}
+      <div>
+        <h2 className="text-2xl font-bold text-darkBlue mb-6 text-center">Lo que dicen nuestros clientes</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              nombre: "Sandra G.",
+              mensaje: "Desde que tengo Airos mi internet nunca falla. ¡Recomendadísimos!",
+            },
+            {
+              nombre: "Carlos M.",
+              mensaje: "La atención al cliente es excelente. Siempre me responden rápido.",
+            },
+            {
+              nombre: "María E.",
+              mensaje: "El internet llegó hasta mi finca donde nadie más ofrecía servicio.",
+            },
+          ].map((testimonio, idx) => (
+            <div key={idx} className="bg-lightBlue p-4 rounded-xl shadow-md text-gray-800">
+              <p className="mb-3 italic">"{testimonio.mensaje}"</p>
+              <h4 className="font-semibold text-darkBlue">{testimonio.nombre}</h4>
+            </div>
+          ))}
         </div>
-        <div className='bg-blue-300 rounded-md m-5'>
-          <h1 className='text-2xl font-bold text-center p-5'>Vision</h1>
-          <p className='p-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius odit doloribus voluptatibus distinctio sequi excepturi dignissimos ratione alias unde nemo? Architecto eligendi quisquam asperiores alias exercitationem optio eum, expedita maiores labore? Praesentium quis odit dolore nam, recusandae, temporibus quasi debitis, minima accusantium similique voluptatibus eligendi suscipit atque? Eius repudiandae earum ducimus eligendi repellat deleniti eos magni animi, voluptates, voluptatum odit vero nostrum soluta quis officia culpa distinctio fugiat maiores nulla. Odit corrupti, dolor sequi dignissimos nemo iusto animi aperiam laborum inventore deserunt voluptatum a amet magni ut impedit, voluptate optio sit quisquam laboriosam distinctio assumenda explicabo quasi expedita exercitationem. Nisi.</p>
-        </div>
-
       </div>
-
-
     </div>
+  );
+};
 
-
-
-  )
-}
-
-export default AboutUsPage
+export default AboutUsPage;

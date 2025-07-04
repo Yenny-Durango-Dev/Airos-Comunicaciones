@@ -5,11 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBlue: '#01377D',
-        strongBlue: '#009DD0',
-        lightBlue: '#98E7F4',
-        limeGreen: '#7FD349',
-        greenMedium: '#26B170',
+        primary: '#01377D',    // títulos principales
+        secondary: '#009DD0',  // subtítulos o botones
+        accent: '#98E7F4',     // detalles, bordes o fondo claro
+        success: '#7FD349',    // mensajes positivos
+        confirm: '#26B170',    // botones de confirmar o acciones verdes
       },
     },
   },
