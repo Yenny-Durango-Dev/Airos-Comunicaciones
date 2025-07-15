@@ -1,15 +1,22 @@
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#01377D',    // títulos principales
-        secondary: '#009DD0',  // subtítulos o botones
-        accent: '#98E7F4',     // detalles, bordes o fondo claro
-        success: '#7FD349',    // mensajes positivos
-        confirm: '#26B170',    // botones de confirmar o acciones verdes
+        primary: '#01377D',
+        secondary: '#009DD0',
+        accent: '#98E7F4',
+        success: '#7FD349',
+        confirm: '#26B170',
+      },
+      animation: {
+        'fade-in-down': 'fadeInDown 0.3s ease-out',
+      },
+      keyframes: {
+        fadeInDown: {
+          '0%': { opacity: 0, transform: 'translateY(-10px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
       },
     },
   },

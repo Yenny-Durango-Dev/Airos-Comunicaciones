@@ -1,3 +1,9 @@
+import  mujer1  from "../img/mujer1.png";
+import  mujer2  from "../img/mujer2.png";
+import  hombre1  from "../img/hombre1.png";
+import  hombre2  from "../img/hombre2.png";
+import  hombre3  from "../img/hombre3.png";
+
 const AboutUsPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12 space-y-16">
@@ -46,15 +52,15 @@ const AboutUsPage = () => {
         <h2 className="text-2xl font-bold text-darkBlue mb-6 text-center">Nuestro equipo</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
           {[
-            { nombre: "David Diosa", rol: "Técnico de instalaciones" },
-            { nombre: "Pablo Franco", rol: "Soporte al cliente" },
-            { nombre: "Kate Franco", rol: "Administración" },
-            { nombre: "Brayan Nidea", rol: "Marketing digital" },
-            { nombre: "Franki Franco", rol: "Gestión operativa" },
+            { nombre: "David Diosa", rol: "Técnico de instalaciones", imagen: hombre1 },
+            { nombre: "Kate Franco", rol: "Administración", imagen: mujer1 },
+            { nombre: "Pablo Franco", rol: "Soporte al cliente", imagen: hombre2 },
+            { nombre: "Brayan Nidea", rol: "Marketing digital", imagen: hombre3 },
+            { nombre: "Cristina Nose", rol: "Marketing digital", imagen: mujer2 },
           ].map((persona, idx) => (
             <div key={idx} className="p-4 border rounded-xl shadow-sm">
               <img
-                src={`https://via.placeholder.com/100?text=${persona.nombre.split(" ")[0]}`}
+                src={persona.imagen}
                 alt={persona.nombre}
                 className="mx-auto rounded-full mb-3"
               />
