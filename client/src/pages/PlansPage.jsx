@@ -6,20 +6,22 @@ const PlansPage = () => {
     <div className="w-full">
       {/* Hero con fondo de imagen */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center shadow-lg"
+        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <div className="p-8 rounded-xl text-black max-w-xl bg-white/70">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#01377d]">PLANES</h1>
+        <div className="bg-[#98e8f47a] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            PLANES
+          </h1>
           <p className="text-lg md:text-xl mb-6">
-            Conoce nuestras opciones de planes y encuentra el que mejor se adapte a tus necesidades.
+            Conoce nuestros planes y encuentra el que mejor se adapte a tus necesidades.
           </p>
         </div>
       </div>
 
       {/* Título principal */}
       <div className="text-center m-10">
-        <h2 className="text-4xl font-bold text-[#01377d] mb-3">Conoce nuestros planes</h2>
+        <h2 className="text-4xl font-bold text-[#48d0e5] mb-3">Conoce nuestros planes</h2>
         <p className="text-lg text-gray-700 max-w-xl mx-auto">
           Ofrecemos planes de internet para todos los hogares, con o sin antena. Elige el que mejor se adapte a ti.
         </p>
@@ -27,7 +29,7 @@ const PlansPage = () => {
 
       {/* Planes con antena */}
       <section>
-        <h3 className="text-2xl font-semibold text-[#01377d] mb-6 text-center">
+        <h3 className="text-2xl font-bold text-[#48d0e5] mb-6 text-center">
           Planes con antena independiente
         </h3>
         <div className="grid md:grid-cols-2 gap-8 m-10">
@@ -47,10 +49,10 @@ const PlansPage = () => {
               key={idx}
               className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
             >
-              <h4 className="text-xl font-bold text-[#01377d]">{plan.nombre}</h4>
-              <p className="text-lg text-gray-700">{plan.velocidad}</p>
-              <p className="text-2xl font-semibold text-[#009DD0]">{plan.precio}</p>
-              <button className="mt-4 bg-[#009DD0] text-white px-6 py-2 rounded-md hover:bg-[#01377d] transition cursor-pointer">
+              <h4 className="text-2xl font-bold text-[#00bfdc]">{plan.nombre}</h4>
+              <p className="text-2xl text-gray-500 font-bold">{plan.velocidad}</p>
+              <p className="text-2xl font-bold text-[#000000]">{plan.precio}</p>
+              <button className="mt-4 bg-[#00ddff] text-black px-6 py-2 rounded-md hover:bg-[#98E7F4] transition cursor-pointer font-semibold">
                 Solicitar este plan
               </button>
             </div>
@@ -60,7 +62,7 @@ const PlansPage = () => {
 
       {/* Planes sin antena */}
       <section>
-        <h3 className="text-2xl font-semibold text-[#01377d] mb-6 text-center">
+        <h3 className="text-2xl font-bold text-[#48d0e5] mb-6 text-center">
           Planes para todos los hogares
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 m-10">
@@ -74,9 +76,9 @@ const PlansPage = () => {
               key={idx}
               className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
             >
-              <h4 className="text-xl font-bold text-[#01377d]">Plan {plan.velocidad}</h4>
-              <p className="text-2xl font-semibold text-[#009DD0]">{plan.precio}</p>
-              <button className="mt-4 bg-[#009DD0] text-white px-6 py-2 rounded-md hover:bg-[#01377d] transition cursor-pointer">
+              <h4 className="text-2xl font-bold text-[#00bfdc]">Plan {plan.velocidad}</h4>
+              <p className="text-2xl font-bold text-gray-500">{plan.precio}</p>
+              <button className="mt-4 bg-[#00ddff] text-black px-6 py-2 rounded-md hover:bg-[#98E7F4] transition cursor-pointer font-semibold">
                 Solicitar este plan
               </button>
             </div>
@@ -85,8 +87,8 @@ const PlansPage = () => {
       </section>
 
       {/* Información adicional */}
-      <section className="bg-[#98E7F4] p-10 m-10 rounded-md text-center text-gray-800 shadow-md">
-        <h3 className="text-xl font-bold text-[#01377d] mb-2">¿Cómo puedo pagar?</h3>
+      <section className="bg-[#98e8f47a] p-10 m-10 rounded-md text-center text-gray-800 shadow-md">
+        <h3 className="text-xl font-bold text-[#019db5] mb-2">¿Cómo puedo pagar?</h3>
         <p className="mb-2">
           Aceptamos pagos por Nequi y Bancolombia. También puedes pagar en efectivo en nuestra oficina.
         </p>
@@ -97,9 +99,9 @@ const PlansPage = () => {
           href="https://wa.me/573502983203"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#26B170] text-white px-6 py-3 rounded-md inline-flex items-center gap-3 font-semibold hover:bg-[#7FD349] transition"
+          className="bg-[#98E7F4] text-black px-6 py-3 rounded-md inline-flex items-center gap-3 font-bold hover:bg-[#73ecff] transition"
         >
-          <FaWhatsapp className="text-2xl text-white" />
+          <FaWhatsapp className="text-2xl text-black" />
           Escríbenos por WhatsApp
         </a>
       </section>

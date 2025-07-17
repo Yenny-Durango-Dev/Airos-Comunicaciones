@@ -10,7 +10,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-[#01377d] text-white py-10 px-6 mt-10">
+    <footer className="bg-black text-white py-10 px-6 mt-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Logo y descripción */}
         <div>
