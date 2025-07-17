@@ -9,13 +9,14 @@ const PlansPage = () => {
         className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center shadow-lg"
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <div className="p-8 rounded-xl text-black max-w-xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">PLANES</h1>
+        <div className="p-8 rounded-xl text-black max-w-xl bg-white/70">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#01377d]">PLANES</h1>
           <p className="text-lg md:text-xl mb-6">
             Conoce nuestras opciones de planes y encuentra el que mejor se adapte a tus necesidades.
           </p>
         </div>
       </div>
+
       {/* Título principal */}
       <div className="text-center m-10">
         <h2 className="text-4xl font-bold text-[#01377d] mb-3">Conoce nuestros planes</h2>
@@ -44,7 +45,7 @@ const PlansPage = () => {
           ].map((plan, idx) => (
             <div
               key={idx}
-              className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition"
+              className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
             >
               <h4 className="text-xl font-bold text-[#01377d]">{plan.nombre}</h4>
               <p className="text-lg text-gray-700">{plan.velocidad}</p>
@@ -71,7 +72,7 @@ const PlansPage = () => {
           ].map((plan, idx) => (
             <div
               key={idx}
-              className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition"
+              className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
             >
               <h4 className="text-xl font-bold text-[#01377d]">Plan {plan.velocidad}</h4>
               <p className="text-2xl font-semibold text-[#009DD0]">{plan.precio}</p>
@@ -84,17 +85,16 @@ const PlansPage = () => {
       </section>
 
       {/* Información adicional */}
-      <section className="bg-[#98E7F4] p-10 m-10 rounded-md text-center text-gray-800">
+      <section className="bg-[#98E7F4] p-10 m-10 rounded-md text-center text-gray-800 shadow-md">
         <h3 className="text-xl font-bold text-[#01377d] mb-2">¿Cómo puedo pagar?</h3>
         <p className="mb-2">
-          Aceptamos pagos por Nequi y Bancolombia.
-          También puedes pagar en efectivo en nuestra oficina.
+          Aceptamos pagos por Nequi y Bancolombia. También puedes pagar en efectivo en nuestra oficina.
         </p>
         <p className="mb-4">
           Instalación rápida, sin papeleo, y con soporte técnico incluido.
         </p>
         <a
-          href="https://wa.me/573001112233"
+          href="https://wa.me/573502983203"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#26B170] text-white px-6 py-3 rounded-md inline-flex items-center gap-3 font-semibold hover:bg-[#7FD349] transition"
