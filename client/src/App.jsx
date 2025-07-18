@@ -10,6 +10,7 @@ import CoveragePage from "./pages/CoveragePage";
 import InvoicePage from "./pages/InvoicePage";
 import PlansPage from "./pages/PlansPage";
 import SpeedTestPage from "./pages/SpeedTestPage";
+import PlansFormPage from "./pages/PlansFormPage";
 
 import { TaskProvider } from "./context/TasksContext";
 import Navbar from "./components/Navbar";
@@ -32,6 +33,7 @@ function App() {
               <Route path='/speed-test' element={<SpeedTestPage />} />
               <Route path='/blog' element={<BlogPage />} />
               <Route path='/contact' element={<ContactPage />} />
+              <Route path='/plans-form' element={<PlansFormPage />} />
             </Routes>
             <Footer />
           </main>

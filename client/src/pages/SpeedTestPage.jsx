@@ -1,30 +1,48 @@
 import React from 'react'
+import banner from "../img/test-velocidad.png"
 
 const SpeedTestPage = () => {
   return (
-    <div className="min-h-screen bg-[#009DD0] text-white px-6 py-12">
-      <div className="max-w-2xl mx-auto bg-white text-gray-800 rounded-xl shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-center text-[#009DD0] mb-6">
-          Test de velocidad
-        </h1>
+    <div className="w-full">
+      {/* Hero con fondo de imagen */}
+      <div
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
+        style={{ backgroundImage: `url(${banner})` }}
+      >
+        <div className="bg-[#01377d6e] backdrop-blur-md p-8 rounded-md text-white shadow-lg max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            ¿Tu Internet está lento?
+          </h1>
+          <p className="text-lg md:text-xl">
+            Realiza aquí una prueba rápida de velocidad y conoce el rendimiento real de tu conexión.
+          </p>
+        </div>
+      </div>
+
+      {/* Contenido del test */}
+      <div className="max-w-5xl mx-auto bg-white text-gray-800 rounded-xl shadow-lg p-10 m-10">
+        <h2 className="text-3xl font-bold text-center text-[#01377d] mb-6">
+          Comprueba tu velocidad de conexión
+        </h2>
 
         <p className="text-center text-gray-600 mb-6">
-          Verifica en tiempo real la velocidad de tu conexión a Internet. Te recomendamos hacerlo con el cable de red conectado directamente al router y sin más dispositivos usando la red.
+          Antes de realizar el test, asegúrate de estar conectado por cable directamente al router y de cerrar otras aplicaciones o dispositivos que usen Internet.
         </p>
 
-        <div className="flex justify-center">
-          <a
-            href="https://fast.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#009DD0] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#26B170] transition"
-          >
-            Iniciar test de velocidad
-          </a>
+        {/* Test embebido */}
+        <div className="w-full h-[500px]">
+          <iframe
+            title="Speedtest"
+            width="100%"
+            height="600"
+            src="https://openspeedtest.com/speedtest?Run=5"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
         </div>
 
         <p className="text-sm text-center mt-6 text-gray-600">
-          Si detectas una velocidad baja, no dudes en contactarnos. Estamos aquí para ayudarte.
+          Si los resultados no son los esperados, contáctanos. Te ayudaremos a resolverlo.
         </p>
       </div>
     </div>

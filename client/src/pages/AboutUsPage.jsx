@@ -10,7 +10,7 @@ const AboutUsPage = () => {
     <div className="w-full">
       {/* Hero con fondo de imagen */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="bg-[#009cd076] backdrop-blur-md p-8 rounded-md text-white shadow-lg">
@@ -67,8 +67,8 @@ const AboutUsPage = () => {
             { nombre: "David Diosa", rol: "Técnico de instalaciones", imagen: hombre1 },
             { nombre: "Katerine Franco", rol: "Administración", imagen: mujer1 },
             { nombre: "Pablo Franco", rol: "Tecnico de instalaciones", imagen: hombre2 },
-            { nombre: "Brayan Nidea", rol: "Tecnico de instalaciones", imagen: hombre3 },
-            { nombre: "Cristina Nose", rol: "Soporte al cliente", imagen: mujer2 },
+            { nombre: "Brayan Apellido", rol: "Tecnico de instalaciones", imagen: hombre3 },
+            { nombre: "Cristina Apellido", rol: "Soporte al cliente", imagen: mujer2 },
             { nombre: "Yenny Durango", rol: "Desarrolladora de software", imagen: mujer2 },
           ].map((persona, idx) => (
             <div

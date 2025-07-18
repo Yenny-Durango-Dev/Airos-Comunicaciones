@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className="w-full mx-auto text-gray-800">
       {/* Hero con fondo de imagen */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="bg-[#01377d67] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
@@ -72,7 +72,7 @@ const HomePage = () => {
             Escríbenos por WhatsApp y te ayudamos en minutos.
           </p>
           <a
-            href="https://wa.me/573234404048"
+            href="https://wa.me/573502983203"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#006eff] text-white px-6 py-3 rounded-md font-bold hover:bg-[#71aeff] hover:text-black transition"

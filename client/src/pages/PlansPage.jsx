@@ -6,15 +6,15 @@ const PlansPage = () => {
     <div className="w-full">
       {/* Hero con fondo de imagen */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="bg-[#98e8f47a] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            PLANES
+            CONÉCTATE CON NOSOTROS
           </h1>
           <p className="text-lg md:text-xl mb-6">
-            Conoce nuestros planes y encuentra el que mejor se adapte a tus necesidades.
+            Vive una mejor experiencia en Internet. Rápido, confiable y con el plan ideal para ti.
           </p>
         </div>
       </div>
@@ -44,19 +44,27 @@ const PlansPage = () => {
               velocidad: "30 Megas",
               precio: "$120.000",
             },
-          ].map((plan, idx) => (
-            <div
-              key={idx}
-              className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
-            >
-              <h4 className="text-2xl font-bold text-[#00bfdc]">{plan.nombre}</h4>
-              <p className="text-2xl text-gray-500 font-bold">{plan.velocidad}</p>
-              <p className="text-2xl font-bold text-[#000000]">{plan.precio}</p>
-              <button className="mt-4 bg-[#00ddff] text-black px-6 py-2 rounded-md hover:bg-[#98E7F4] transition cursor-pointer font-semibold">
-                Solicitar este plan
-              </button>
-            </div>
-          ))}
+          ].map((plan, idx) => {
+            const mensaje = `Hola, me interesa el ${plan.nombre} de ${plan.velocidad} por ${plan.precio}`;
+            const formURL = `/plans-form`;
+
+            return (
+              <div
+                key={idx}
+                className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
+              >
+                <h4 className="text-2xl font-bold text-[#00bfdc]">{plan.nombre}</h4>
+                <p className="text-2xl text-gray-500 font-bold">{plan.velocidad}</p>
+                <p className="text-2xl font-bold text-[#000000]">{plan.precio}</p>
+                <a
+                  href={formURL}
+                  className="mt-4 bg-[#00ddff] text-black px-6 py-2 rounded-md hover:bg-[#98E7F4] transition cursor-pointer font-semibold inline-block"
+                >
+                  Solicitar este plan
+                </a>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -71,18 +79,26 @@ const PlansPage = () => {
             { velocidad: "20 Megas", precio: "$70.000" },
             { velocidad: "50 Megas", precio: "$90.000" },
             { velocidad: "100 Megas", precio: "$140.000" },
-          ].map((plan, idx) => (
-            <div
-              key={idx}
-              className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
-            >
-              <h4 className="text-2xl font-bold text-[#00bfdc]">Plan {plan.velocidad}</h4>
-              <p className="text-2xl font-bold text-gray-500">{plan.precio}</p>
-              <button className="mt-4 bg-[#00ddff] text-black px-6 py-2 rounded-md hover:bg-[#98E7F4] transition cursor-pointer font-semibold">
-                Solicitar este plan
-              </button>
-            </div>
-          ))}
+          ].map((plan, idx) => {
+            const mensaje = `Hola, me interesa el plan de ${plan.velocidad} por ${plan.precio}`;
+            const formURL = `/plans-form`;
+
+            return (
+              <div
+                key={idx}
+                className="border border-[#98E7F4] p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition bg-white"
+              >
+                <h4 className="text-2xl font-bold text-[#00bfdc]">Plan {plan.velocidad}</h4>
+                <p className="text-2xl font-bold text-gray-500">{plan.precio}</p>
+                <a
+                  href={formURL}
+                  className="mt-4 bg-[#00ddff] text-black px-6 py-2 rounded-md hover:bg-[#98E7F4] transition cursor-pointer font-semibold inline-block"
+                >
+                  Solicitar este plan
+                </a>
+              </div>
+            );
+          })}
         </div>
       </section>
 

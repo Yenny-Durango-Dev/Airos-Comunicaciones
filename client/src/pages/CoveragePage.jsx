@@ -31,7 +31,7 @@ const CoveragePage = () => {
     <div className="w-full">
       {/* Hero con fondo de imagen */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="bg-[#7ed3497b] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
@@ -39,7 +39,7 @@ const CoveragePage = () => {
             COBERTURA
           </h1>
           <p className="text-lg md:text-xl mb-6">
-            Conoce nuestros servicios en diferentes barrios de Medellín.
+            ¡Estamos donde nos necesitas! Internet confiable en tu zona.
           </p>
         </div>
       </div>

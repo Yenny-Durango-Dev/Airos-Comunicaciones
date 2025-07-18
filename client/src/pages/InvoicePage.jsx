@@ -1,69 +1,51 @@
-import React from 'react'
-import banner from "../img/factura.png"
+import React from "react";
+import { FaWhatsapp, FaFileInvoice } from "react-icons/fa";
+import banner from "../img/factura.png";
 
 const InvoicePage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <div className="bg-[#26b17081] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
+        <div className="bg-black/60 backdrop-blur-sm p-10 rounded-md text-white shadow-lg max-w-2xl mx-4">
+          <FaFileInvoice className="text-6xl mb-4 mx-auto text-[#26B170]" />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            FACTURA
+            CONSULTA TU FACTURA
           </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Aquí puedes encontrar la información de tu factura.
+          <p className="text-lg md:text-xl mb-2">
+            Verifica el estado de tu factura de forma rápida y segura.
+          </p>
+          <p className="text-sm text-gray-200">
+            Solo necesitas dar clic en el botón y uno de nuestros asesores te enviará la factura directamente por WhatsApp.
           </p>
         </div>
       </div>
-      <div className="max-w-2xl mx-auto bg-white text-gray-800 rounded-xl shadow-lg p-10 m-10">
-        <h1 className="text-3xl font-bold text-center text-[#26B170] mb-6">
-          Consulta tu factura
-        </h1>
 
-        {/* Formulario */}
-        <form className="space-y-4 m-5 p-5">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Número de contrato o cédula
-            </label>
-            <input
-              type="text"
-              placeholder="Ej: 123456789"
-              className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#26B170]"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-[#26B170] text-white py-2 px-4 rounded-md hover:bg-[#387e5c] hover:text-white transition cursor-pointer font-bold"
-          >
-            Consultar factura
-          </button>
-        </form>
-
-        {/* Información adicional */}
-        <p className="text-center text-sm mt-6 text-gray-600">
-          Por ahora, las facturas se consultan directamente con nuestros asesores.
-          Puedes escribirnos por WhatsApp para recibir tu factura al instante.
+      {/* Sección de acción */}
+      <div className="max-w-xl mx-auto bg-white text-gray-800 rounded-xl shadow-xl p-10 -mt-20 z-10 relative">
+        <h2 className="text-2xl font-bold text-center text-[#26B170] mb-4">
+          ¿Necesitas tu factura?
+        </h2>
+        <p className="text-center mb-6 text-gray-700">
+          Haz clic en el botón y uno de nuestros asesores te atenderá de inmediato por WhatsApp.
         </p>
-
-        {/* Botón de WhatsApp */}
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center">
           <a
             href="https://wa.me/573001112233"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#26B170] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#387e5c] transition"
+            className="bg-[#26B170] hover:bg-[#1e8d5a] text-white px-8 py-4 rounded-md font-bold text-lg flex items-center gap-3 shadow-lg transition"
           >
-            Escríbenos por WhatsApp
+            <FaWhatsapp className="text-2xl" />
+            Consultar factura
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default InvoicePage
+export default InvoicePage;
