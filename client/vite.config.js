@@ -12,11 +12,4 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  server: {
-    https: {
-      key: fs.readFileSync('./cert/airoscomunicaciones.com.co-key.pem'),
-      cert: fs.readFileSync('./cert/airoscomunicaciones.com.co.pem'),
-    },
-    host: true, // permite acceder desde la IP pública
-  },
 })
