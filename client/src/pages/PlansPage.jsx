@@ -46,8 +46,7 @@ const PlansPage = () => {
             },
           ].map((plan, idx) => {
             const mensaje = `Hola, me interesa el ${plan.nombre} de ${plan.velocidad} por ${plan.precio}`;
-            const formURL = `/plans-form`;
-
+            const formURL = `/plans-form?plan=${encodeURIComponent(plan.nombre)} - ${plan.velocidad} - ${plan.precio}`;
             return (
               <div
                 key={idx}
@@ -81,7 +80,7 @@ const PlansPage = () => {
             { velocidad: "100 Megas", precio: "$140.000" },
           ].map((plan, idx) => {
             const mensaje = `Hola, me interesa el plan de ${plan.velocidad} por ${plan.precio}`;
-            const formURL = `/plans-form`;
+            const formURL = `/plans-form?plan=${plan.velocidad} - ${plan.precio}`;
 
             return (
               <div

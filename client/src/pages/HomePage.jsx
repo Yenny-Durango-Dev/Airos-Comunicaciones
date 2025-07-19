@@ -1,30 +1,22 @@
 import { FaWifi, FaRocket, FaHeadset, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import banner from "../img/home.png";
+import banner1 from "../img/home.jpeg";
+import banner2 from "../img/home2.png";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const HomePage = () => {
   return (
     <div className="w-full mx-auto text-gray-800">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#01377d67] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            AIROS COMUNICACIONES
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Internet rápido, estable y sin complicaciones en tu hogar.
-          </p>
-          <Link to="/plans">
-            <button className="bg-[#01377d] text-white px-6 py-3 rounded-md font-bold hover:bg-[#63a7ff] hover:text-black cursor-pointer transition">
-              Solicita tu plan
-            </button>
-          </Link>
-        </div>
-      </div>
-
+      <Hero
+        images={[banner1, banner2]}
+        text="Internet rápido, estable y sin complicaciones en tu hogar."
+        buttonText="Solicita tu plan"
+        buttonLink="/plans"
+        showLogo={true}
+        logo={logo}
+      />
       {/* Beneficios */}
       <div className="px-6 py-16 text-center">
         <h2 className="text-3xl font-bold text-[#01377d] mb-12">
