@@ -1,23 +1,22 @@
 import React from 'react'
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
-import banner from "../img/contacto.png";
+import banner22 from "../img/background22.jpg";
+import banner23 from "../img/background23.jpg";
+import banner24 from "../img/background24.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const ContactPage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center shadow-lg overflow-hidden"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#98e8f476] p-8 rounded-md text-black max-w-2xl backdrop-blur-sm">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">CONTACTO</h1>
-          <p className="text-lg md:text-xl">
-            Para cualquier consulta o inquietud, no dudes en contactar con nosotros.
-          </p>
-        </div>
-      </div>
-
+      <Hero
+        images={[banner22, banner23, banner24]}
+        title="Ponte en contacto con nosotros"
+        text="Escríbenos por formulario, WhatsApp, teléfono o correo. También puedes consultar nuestros horarios y ubicación."
+        showLogo={true}
+        logo={logo}
+      />
       {/* Contenido centrado */}
       <div className="w-full max-w-4xl mx-auto">
         {/* Formulario */}

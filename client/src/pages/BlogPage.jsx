@@ -1,5 +1,10 @@
 import React from 'react'
 import banner from "../img/blog.png"
+import banner19 from "../img/background19.jpg";
+import banner20 from "../img/background20.jpg";
+import banner21 from "../img/background21.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const BlogPage = () => {
   // Simulación de artículos del blog
@@ -27,19 +32,13 @@ const BlogPage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#009cd072] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            BLOG
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Conoce nuestros consejos y noticias sobre tecnología y servicios de internet.
-          </p>
-        </div>
-      </div>
+      <Hero
+        images={[banner19, banner20, banner21]}
+        title="Explora nuestro blog"
+        text="Encuentra consejos, noticias, tutoriales, alertas y más contenido útil para estar siempre conectado."
+        showLogo={true}
+        logo={logo}
+      />
       <div className="max-w-4xl mx-auto m-10 p-10">
         <h1 className="text-4xl font-bold mb-8 text-center text-[#009DD0]">
           Blog de Airos Comunicaciones

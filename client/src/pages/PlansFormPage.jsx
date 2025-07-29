@@ -16,6 +16,31 @@ const PlansFormPage = () => {
         plan: planSeleccionado,
     });
 
+    useEffect(() => {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const { latitude, longitude } = position.coords;
+                    setForm((prevForm) => {
+                        // Solo autollenar si el campo dirección está vacío
+                        if (!prevForm.direccion) {
+                            return {
+                                ...prevForm,
+                                direccion: `Ubicación automática: https://www.google.com/maps?q=${latitude},${longitude}`,
+                            };
+                        }
+                        return prevForm;
+                    });
+                },
+                (error) => {
+                    console.warn("No se pudo obtener la ubicación:", error.message);
+                }
+            );
+        } else {
+            console.warn("La geolocalización no está disponible en este navegador.");
+        }
+    }, []);
+
     const handleChange = (e) => {
         const { name, value, files } = e.target;
         setForm({
@@ -32,7 +57,7 @@ const PlansFormPage = () => {
         - Teléfono: ${form.telefono}
         - Correo: ${form.correo}
         - Dirección: ${form.direccion}`;
-        const numeroEmpresa = "573215385497"; // Tu número real
+        const numeroEmpresa = "573215385497"; // Número real de la empresa
         const url = `https://wa.me/${numeroEmpresa}?text=${encodeURIComponent(mensaje)}`;
 
         window.open(url, "_blank");
@@ -40,12 +65,18 @@ const PlansFormPage = () => {
 
     return (
         <div className="max-w-3xl mx-auto pt-20">
-            <form onSubmit={handleSubmit} className="space-y-4 m-10 p-10 pt-10 shadow-md w-full max-w-3xl mx-auto">
-                <h2 className="text-3xl font-bold mb-6 text-center text-[#00bfdc]">Completa el formulario para solicitar tu plan</h2>
+            <form
+                onSubmit={handleSubmit}
+                className="space-y-4 m-10 p-10 pt-10 shadow-md w-full max-w-3xl mx-auto"
+            >
+                <h2 className="text-3xl font-bold mb-6 text-center text-[#00bfdc]">
+                    Completa el formulario para solicitar tu plan
+                </h2>
 
                 {form.plan && (
                     <p className="text-center text-lg font-semibold text-[#019db5]">
-                        Estás solicitando: <span className="font-bold">{form.plan}</span>
+                        Estás solicitando:{" "}
+                        <span className="font-bold">{form.plan}</span>
                     </p>
                 )}
 
