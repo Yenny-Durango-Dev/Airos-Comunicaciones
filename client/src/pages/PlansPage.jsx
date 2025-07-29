@@ -1,24 +1,22 @@
 import banner from "../img/planes.png";
 import { FaWhatsapp } from "react-icons/fa";
+import banner7 from "../img/background7.jpg";
+import banner8 from "../img/background8.jpg";
+import banner9 from "../img/background9.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const PlansPage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#98e8f47a] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            CONÉCTATE CON NOSOTROS
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Vive una mejor experiencia en Internet. Rápido, confiable y con el plan ideal para ti.
-          </p>
-        </div>
-      </div>
-
+      <Hero
+        images={[banner7, banner8, banner9]}
+        title="Planes de internet para todos"
+        text="Con antena independiente y formas de pago fáciles para cada hogar."
+        showLogo={true}
+        logo={logo}
+      />
       {/* Título principal */}
       <div className="text-center m-10">
         <h2 className="text-4xl font-bold text-[#48d0e5] mb-3">Conoce nuestros planes</h2>

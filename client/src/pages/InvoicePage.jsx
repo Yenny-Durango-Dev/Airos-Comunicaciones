@@ -1,29 +1,22 @@
 import React from "react";
 import { FaWhatsapp, FaFileInvoice } from "react-icons/fa";
-import banner from "../img/factura.png";
+import banner13 from "../img/background13.jpg";
+import banner14 from "../img/background14.jpg";
+import banner15 from "../img/background15.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const InvoicePage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-black/60 backdrop-blur-sm p-10 rounded-md text-white shadow-lg max-w-2xl mx-4">
-          <FaFileInvoice className="text-6xl mb-4 mx-auto text-[#26B170]" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            CONSULTA TU FACTURA
-          </h1>
-          <p className="text-lg md:text-xl mb-2">
-            Verifica el estado de tu factura de forma rápida y segura.
-          </p>
-          <p className="text-sm text-gray-200">
-            Solo necesitas dar clic en el botón y uno de nuestros asesores te enviará la factura directamente por WhatsApp.
-          </p>
-        </div>
-      </div>
-
+      <Hero
+        images={[banner13, banner14, banner15]}
+        title="Solicita tu factura en un solo paso"
+        text="Haz clic en el botón y recibe tu factura por WhatsApp con la ayuda de un asesor."
+        showLogo={true}
+        logo={logo}
+      />
       {/* Sección de acción */}
       <div className="max-w-xl mx-auto bg-white text-gray-800 rounded-xl shadow-xl p-10 -mt-20 z-10 relative">
         <h2 className="text-2xl font-bold text-center text-[#26B170] mb-4">

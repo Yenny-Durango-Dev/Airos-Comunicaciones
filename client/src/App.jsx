@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
 
 // paginas
 import HomePage from "./pages/HomePage";
@@ -12,14 +11,11 @@ import PlansPage from "./pages/PlansPage";
 import SpeedTestPage from "./pages/SpeedTestPage";
 import PlansFormPage from "./pages/PlansFormPage";
 
-import { TaskProvider } from "./context/TasksContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <AuthProvider>
-      <TaskProvider>
         <BrowserRouter>
           <main>
             <Navbar />
@@ -38,8 +34,6 @@ function App() {
             <Footer />
           </main>
         </BrowserRouter>
-      </TaskProvider>
-    </AuthProvider>
   )
 }
 export default App;

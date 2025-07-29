@@ -1,24 +1,21 @@
 import React from 'react'
-import banner from "../img/test-velocidad.png"
+import banner16 from "../img/background16.jpg";
+import banner17 from "../img/background17.jpg";
+import banner18 from "../img/background18.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const SpeedTestPage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#01377d6e] backdrop-blur-md p-8 rounded-md text-white shadow-lg max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            ¿Tu Internet está lento?
-          </h1>
-          <p className="text-lg md:text-xl">
-            Realiza aquí una prueba rápida de velocidad y conoce el rendimiento real de tu conexión.
-          </p>
-        </div>
-      </div>
-
+      <Hero
+        images={[banner16, banner17, banner18]}
+        title="¿Tu internet está lento?"
+        text="Prueba nuestra herramienta y descubre la velocidad real de tu conexión."
+        showLogo={true}
+        logo={logo}
+      />
       {/* Contenido del test */}
       <div className="max-w-5xl mx-auto bg-white text-gray-800 rounded-xl shadow-lg p-10 m-10">
         <h2 className="text-3xl font-bold text-center text-[#01377d] mb-6">

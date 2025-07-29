@@ -3,25 +3,23 @@ import mujer2 from "../img/mujer2.png";
 import hombre1 from "../img/hombre1.png";
 import hombre2 from "../img/hombre2.png";
 import hombre3 from "../img/hombre3.png";
-import banner from "../img/quienes-somos.png";
+import banner4 from "../img/background4.jpg";
+import banner5 from "../img/background5.jpg";
+import banner6 from "../img/background6.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const AboutUsPage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#009cd076] backdrop-blur-md p-8 rounded-md text-white shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            QUIENES SOMOS
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Conoce a nuestros socios y colaboradores.
-          </p>
-        </div>
-      </div>
+      <Hero
+        images={[banner4, banner5, banner6]}
+        title="Conoce quiénes somos"
+        text="Nuestra historia, valores y la confianza que nuestros clientes depositan en nosotros."
+        showLogo={true}
+        logo={logo}
+      />
 
       {/* Historia */}
       <section className="bg-white p-10 m-10 rounded-xl shadow-md">
@@ -42,7 +40,7 @@ const AboutUsPage = () => {
         <div className="bg-white p-8 rounded-xl shadow-md">
           <h3 className="text-2xl font-bold text-[#009DD0] mb-4">Visión</h3>
           <p>
-           Nuestra vision es ser la empresa líder en la industria, conocida por su compromiso con la calidad, la innovación y la excelencia.
+            Nuestra vision es ser la empresa líder en la industria, conocida por su compromiso con la calidad, la innovación y la excelencia.
           </p>
         </div>
       </section>

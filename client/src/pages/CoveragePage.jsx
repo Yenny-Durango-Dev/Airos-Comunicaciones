@@ -1,5 +1,9 @@
 import { FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
-import banner from "../img/cobertura.png";
+import banner10 from "../img/background10.jpg";
+import banner11 from "../img/background11.jpg";
+import banner12 from "../img/background12.jpg";
+import logo from "../img/logo.png";
+import Hero from "../components/Hero"
 
 const barriosNororiental = [
   "Santo Domingo",
@@ -30,20 +34,14 @@ const CoveragePage = () => {
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
-      <div
-        className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#7ed3497b] backdrop-blur-md p-8 rounded-md text-black shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            COBERTURA
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            ¡Estamos donde nos necesitas! Internet confiable en tu zona.
-          </p>
-        </div>
-      </div>
-
+      <Hero
+        images={[banner10, banner11, banner12]}
+        title="¿Dónde tenemos cobertura?"
+        text="Consulta los barrios de Medellín donde ofrecemos servicio y ubícalos fácilmente en el mapa.
+        ¿Tu zona no aparece? Escríbenos por WhatsApp y lo verificamos contigo."
+        showLogo={true}
+        logo={logo}
+      />
       <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
         {/* Zona Nororiental */}
         <div className="shadow-md p-10 rounded-md">

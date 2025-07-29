@@ -1,7 +1,8 @@
 import { FaWifi, FaRocket, FaHeadset, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import banner1 from "../img/home.jpeg";
-import banner2 from "../img/home2.png";
+import banner1 from "../img/background1.jpg";
+import banner2 from "../img/background2.jpg";
+import banner3 from "../img/background3.jpg";
 import logo from "../img/logo.png";
 import Hero from "../components/Hero"
 
@@ -10,10 +11,11 @@ const HomePage = () => {
     <div className="w-full mx-auto text-gray-800">
       {/* Hero con fondo de imagen */}
       <Hero
-        images={[banner1, banner2]}
-        text="Internet rápido, estable y sin complicaciones en tu hogar."
+        images={[banner1, banner2, banner3]}
+        title={"Internet confiable para todos los hogares"}
+        text="Conexión estable, planes accesibles y atención cercana.¡Descubre por qué cada vez más personas nos eligen!"
         buttonText="Solicita tu plan"
-        buttonLink="/plans"
+        buttonLink="/plans" 
         showLogo={true}
         logo={logo}
       />
