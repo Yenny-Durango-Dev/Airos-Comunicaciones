@@ -39,13 +39,15 @@ function Footer() {
           <h2 className="text-xl font-semibold mb-4 text-[#26B170]">Contacto</h2>
           <ul className="space-y-3 text-white">
             <li className="flex items-center gap-2 hover:text-[#7FD349] transition">
-              <Mail size={18} /> <a href="mailto:correo@airos.com">correo@airos.com</a>
+              <Mail size={18} /> <a href="mailto:maxiwifi2019@gmail.com">maxiwifi2019@gmail.com</a>
             </li>
             <li className="flex items-center gap-2 hover:text-[#7FD349] transition">
-              <Phone size={18} /> <a href="https://wa.me/123456789">WhatsApp</a>
+              <Phone size={18} /> <a href="https://wa.me/573502983203 ">3502983203 </a>
+              -
+              <Phone size={18} /> <a href="https://wa.me/573506080789">3506080789</a>
             </li>
             <li className="flex items-center gap-2 hover:text-[#7FD349] transition">
-              <MapPin size={18} /> <a href="#">Dirección</a>
+              <MapPin size={18} /> <a href="https://maps.app.goo.gl/U79usQ1rS8EqTAcD6">Km 7 antigua via guarne, santo domingo el pinar alberge</a>
             </li>
           </ul>
         </div>

@@ -1,5 +1,6 @@
 import mujer1 from "../img/mujer1.png";
 import mujer2 from "../img/mujer2.png";
+import mujer3 from "../img/mujer3.png";
 import hombre1 from "../img/hombre1.png";
 import hombre2 from "../img/hombre2.png";
 import hombre3 from "../img/hombre3.png";
@@ -65,9 +66,9 @@ const AboutUsPage = () => {
             { nombre: "David Diosa", rol: "Técnico de instalaciones", imagen: hombre1 },
             { nombre: "Katerine Franco", rol: "Administración", imagen: mujer1 },
             { nombre: "Pablo Franco", rol: "Tecnico de instalaciones", imagen: hombre2 },
-            { nombre: "Brayan Apellido", rol: "Tecnico de instalaciones", imagen: hombre3 },
-            { nombre: "Cristina Apellido", rol: "Soporte al cliente", imagen: mujer2 },
-            { nombre: "Yenny Durango", rol: "Desarrolladora de software", imagen: mujer2 },
+            { nombre: "Brayan Renginfo", rol: "Tecnico de instalaciones", imagen: hombre3 },
+            { nombre: "Isabel Muñoz", rol: "Contact Center", imagen: mujer2 },
+            { nombre: "Yenny Durango", rol: "Desarrolladora de software", imagen: mujer3 },
           ].map((persona, idx) => (
             <div
               key={idx}

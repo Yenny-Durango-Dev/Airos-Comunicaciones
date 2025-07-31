@@ -1,9 +1,10 @@
+import React, { useState } from "react";
 import { FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import banner10 from "../img/background10.jpg";
 import banner11 from "../img/background11.jpg";
 import banner12 from "../img/background12.jpg";
 import logo from "../img/logo.png";
-import Hero from "../components/Hero"
+import Hero from "../components/Hero";
 
 const barriosNororiental = [
   "Santo Domingo",
@@ -31,9 +32,37 @@ const barriosBelen = [
 ];
 
 const CoveragePage = () => {
+  const [loadingLocation, setLoadingLocation] = useState(false);
+
+  const handleLocationClick = () => {
+    setLoadingLocation(true);
+
+    if (!navigator.geolocation) {
+      alert("Tu navegador no soporta geolocalización.");
+      setLoadingLocation(false);
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        const message = `Hola, quiero saber si tienen cobertura en mi zona. Mi ubicación es:\nhttps://www.google.com/maps?q=${latitude},${longitude}`;
+
+        const url = `https://wa.me/573502983203?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+
+        setLoadingLocation(false);
+      },
+      (error) => {
+        alert("No se pudo obtener tu ubicación. Por favor verifica los permisos del navegador.");
+        setLoadingLocation(false);
+      }
+    );
+  };
+
   return (
     <div className="w-full">
-      {/* Hero con fondo de imagen */}
       <Hero
         images={[banner10, banner11, banner12]}
         title="¿Dónde tenemos cobertura?"
@@ -91,21 +120,20 @@ const CoveragePage = () => {
           </div>
         </div>
 
-        {/* Contacto */}
+        {/* Contacto con ubicación */}
         <div className="bg-[#7ed34982] p-10 rounded-md text-center text-gray-800 shadow-md">
           <h3 className="text-xl font-bold text-[#307d01] mb-3">¿No ves tu zona?</h3>
           <p className="mb-4">
             Escríbenos y confirma si ya tenemos cobertura en tu sector o si pronto llegaremos.
           </p>
-          <a
-            href="https://wa.me/573502983203"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#7FD349] text-black px-6 py-3 rounded-md inline-flex items-center gap-3 font-semibold hover:bg-[#a7ff70] transition"
+          <button
+            onClick={handleLocationClick}
+            disabled={loadingLocation}
+            className="bg-[#7FD349] text-black px-6 py-3 rounded-md inline-flex items-center gap-3 font-semibold hover:bg-[#a7ff70] transition disabled:opacity-50"
           >
             <FaWhatsapp className="text-2xl text-black" />
-            Escríbenos por WhatsApp
-          </a>
+            {loadingLocation ? "Obteniendo ubicación..." : "Escríbenos por WhatsApp"}
+          </button>
         </div>
       </div>
     </div>

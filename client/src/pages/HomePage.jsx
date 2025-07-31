@@ -66,7 +66,7 @@ const HomePage = () => {
             Escríbenos por WhatsApp y te ayudamos en minutos.
           </p>
           <a
-            href="https://wa.me/573502983203"
+            href="https://wa.me/573502983203?text=Hola%2C%20quiero%20saber%20si%20hay%20cobertura%20en%20mi%20zona.%20¿Me%20puedes%20ayudar%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#006eff] text-white px-6 py-3 rounded-md font-bold hover:bg-[#71aeff] hover:text-black transition"

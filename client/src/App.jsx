@@ -13,27 +13,29 @@ import PlansFormPage from "./pages/PlansFormPage";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-        <BrowserRouter>
-          <main>
-            <Navbar />
-            <Routes>
-              {/* paginas publicas */}
-              <Route path='/' element={<HomePage />} />
-              <Route path='/about-us' element={<AboutUsPage />} />
-              <Route path='/plans' element={<PlansPage />} />
-              <Route path='/coverage' element={<CoveragePage />} />
-              <Route path='/invoice' element={<InvoicePage />} />
-              <Route path='/speed-test' element={<SpeedTestPage />} />
-              <Route path='/blog' element={<BlogPage />} />
-              <Route path='/contact' element={<ContactPage />} />
-              <Route path='/plans-form' element={<PlansFormPage />} />
-            </Routes>
-            <Footer />
-          </main>
-        </BrowserRouter>
+    <BrowserRouter>
+      <ScrollToTop />
+      <main>
+        <Navbar />
+        <Routes>
+          {/* paginas publicas */}
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about-us' element={<AboutUsPage />} />
+          <Route path='/plans' element={<PlansPage />} />
+          <Route path='/coverage' element={<CoveragePage />} />
+          <Route path='/invoice' element={<InvoicePage />} />
+          <Route path='/speed-test' element={<SpeedTestPage />} />
+          <Route path='/blog' element={<BlogPage />} />
+          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/plans-form' element={<PlansFormPage />} />
+        </Routes>
+        <Footer />
+      </main>
+    </BrowserRouter>
   )
 }
 export default App;

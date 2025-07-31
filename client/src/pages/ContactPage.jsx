@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
 import banner22 from "../img/background22.jpg";
 import banner23 from "../img/background23.jpg";
@@ -7,6 +7,18 @@ import logo from "../img/logo.png";
 import Hero from "../components/Hero"
 
 const ContactPage = () => {
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [mensaje, setMensaje] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const texto = `Hola, soy *${nombre}* (${email}) y quiero decir lo siguiente:\n\n${mensaje}`;
+    const url = `https://wa.me/573502983203?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
+  }
   return (
     <div className="w-full">
       {/* Hero con fondo de imagen */}
@@ -21,7 +33,10 @@ const ContactPage = () => {
       <div className="w-full max-w-4xl mx-auto">
         {/* Formulario */}
         <div className="p-5 m-5 bg-[#F0FAFC] rounded-lg shadow-md w-full">
-          <form className="bg-white p-8 rounded-xl shadow-xl w-full max-w-xl mx-auto space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white p-8 rounded-xl shadow-xl w-full max-w-xl mx-auto space-y-6"
+          >
             <h2 className="text-3xl font-bold text-center text-[#14b1c9]">Formulario de Contacto</h2>
 
             <div className="flex flex-col gap-2 w-full">
@@ -29,6 +44,8 @@ const ContactPage = () => {
               <input
                 id="nombre"
                 type="text"
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
                 placeholder="Tu nombre"
                 className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#98E7F4] transition duration-200"
                 required
@@ -40,6 +57,8 @@ const ContactPage = () => {
               <input
                 id="email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="tucorreo@ejemplo.com"
                 className="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#98E7F4] transition duration-200"
                 required
@@ -50,6 +69,8 @@ const ContactPage = () => {
               <label htmlFor="mensaje" className="text-sm font-medium text-gray-700">Mensaje</label>
               <textarea
                 id="mensaje"
+                value={mensaje}
+                onChange={(e) => setMensaje(e.target.value)}
                 placeholder="Escribe tu mensaje aquí..."
                 className="border border-gray-300 rounded-md p-3 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#98E7F4] transition duration-200"
                 required
@@ -60,10 +81,9 @@ const ContactPage = () => {
               type="submit"
               className="bg-[#14b1c9] text-white px-6 py-3 w-full rounded-md font-semibold hover:bg-[#0f9dae] transition duration-300"
             >
-              Enviar mensaje
+              Enviar por WhatsApp
             </button>
           </form>
-
         </div>
 
         {/* Separador */}

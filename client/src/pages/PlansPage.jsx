@@ -109,7 +109,7 @@ const PlansPage = () => {
           Instalación rápida, sin papeleo, y con soporte técnico incluido.
         </p>
         <a
-          href="https://wa.me/573502983203"
+          href="https://wa.me/573502983203?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20las%20formas%20de%20pago%20disponibles.%20%C2%BFMe%20puedes%20ayudar%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#98E7F4] text-black px-6 py-3 rounded-md inline-flex items-center gap-3 font-bold hover:bg-[#73ecff] transition"
